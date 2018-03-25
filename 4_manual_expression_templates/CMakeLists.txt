@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.9)
-project(expr_templates)
+project(4_expr_templates)
 
 set(CMAKE_CXX_STANDARD 17)
 
@@ -7,7 +7,13 @@ set(CMAKE_C_COMPILER   /usr/bin/clang   CACHE STRING "Compiler" FORCE)
 set(CMAKE_CXX_COMPILER /usr/bin/clang++-5.0 CACHE STRING "Compiler" FORCE)
 #set(CMAKE_VERBOSE_MAKEFILE true)
 
-add_executable(expr_templates main.cpp sequence.hpp pow2.hpp multiply.hpp)
+add_executable(expr_templates
+        main.cpp
+        discrete_sequence.hpp
+        pow.hpp
+        pow2.hpp
+        multiply.hpp
+)
 
 target_compile_options(expr_templates
     PRIVATE
