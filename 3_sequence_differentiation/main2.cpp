@@ -1,4 +1,4 @@
-#include "fixed_sequence.hpp"
+#include "discrete_sequence.hpp"
 #include <array>
 
 std::array<int, 5> data{{1, 3, 3, 4, 5}};
@@ -18,7 +18,7 @@ template <typename F>
 differentiator(differentiator<F>) -> differentiator<differentiator<F>>;
 
 int main() {
-    fixed_sequence s{data};
+    discrete_sequence s{data};
     differentiator firstDerivative{s};
     differentiator secondDerivative{firstDerivative};
 //    differentiator thirdDerivative{secondDerivative};

@@ -7,7 +7,12 @@ set(CMAKE_C_COMPILER   /usr/bin/clang   CACHE STRING "Compiler" FORCE)
 set(CMAKE_CXX_COMPILER /usr/bin/clang++-5.0 CACHE STRING "Compiler" FORCE)
 #set(CMAKE_VERBOSE_MAKEFILE true)
 
-add_executable(differentiation main.cpp expose.hpp fixed_sequence.hpp)
+add_executable(differentiation
+        main.cpp
+        expose.hpp
+        discrete_sequence.hpp
+        differentiator.hpp
+)
 
 target_compile_options(differentiation
     PRIVATE

@@ -4,9 +4,9 @@
 #include <cstdlib>
 
 template <typename Sequence>
-struct fixed_sequence
+struct discrete_sequence
 {
-    constexpr explicit fixed_sequence(Sequence const& seq) : seq{seq} {};
+    constexpr explicit discrete_sequence(Sequence const& seq) : seq{seq} {};
 
     auto operator()(size_t index) const {
         return seq[index];

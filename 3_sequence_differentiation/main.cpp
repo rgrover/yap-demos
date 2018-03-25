@@ -2,9 +2,9 @@
 std::array<int, 5> data{{1, 3, 3, 4, 5}};
 
 template <typename Sequence>
-struct fixed_sequence
+struct discrete_sequence
 {
-    constexpr explicit fixed_sequence(Sequence const& seq) : seq{seq} {};
+    constexpr explicit discrete_sequence(Sequence const& seq) : seq{seq} {};
 
     auto operator()(size_t index) const {
         return seq[index];
@@ -26,9 +26,9 @@ struct differentiator
 };
 
 int main() {
-    fixed_sequence s{data};
+    discrete_sequence s{data};
     differentiator firstDerivative{s};
-    differentiator secondDerivative{firstDerivative}; // the danger of invoking the copy constructor
+//    differentiator secondDerivative{firstDerivative}; // the danger of invoking the copy constructor
 
     return firstDerivative(0);
 //    return secondDerivative(0);
