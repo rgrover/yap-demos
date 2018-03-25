@@ -1,18 +1,7 @@
+#include "fixed_sequence.hpp"
 #include <array>
 
 std::array<int, 5> data{{1, 3, 3, 4, 5}};
-
-template <typename Sequence>
-struct fixed_sequence
-{
-    constexpr explicit fixed_sequence(Sequence const& seq) : seq{seq} {};
-
-    auto operator()(size_t index) const {
-        return seq[index];
-    }
-
-    Sequence const& seq;
-};
 
 template <typename Function>
 struct differentiator
@@ -25,14 +14,15 @@ struct differentiator
 
     Function const& f;
 };
-template <typename Another>
-differentiator(differentiator<Another>) -> differentiator<differentiator<Another>>;
+template <typename F>
+differentiator(differentiator<F>) -> differentiator<differentiator<F>>;
 
 int main() {
     fixed_sequence s{data};
     differentiator firstDerivative{s};
     differentiator secondDerivative{firstDerivative};
-    differentiator thirdDerivative{secondDerivative};
+//    differentiator thirdDerivative{secondDerivative};
 
-    return thirdDerivative(0);
+    return secondDerivative(0);
+//    return thirdDerivative(0);
 }

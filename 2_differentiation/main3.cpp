@@ -13,3 +13,5 @@ int main()
 }
 
 // in some cases the compiler may be unable to perform the expected optimizations due to lack of information.
+
+// we be able to add referential transparency

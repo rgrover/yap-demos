@@ -28,6 +28,8 @@ struct differentiator
 int main() {
     fixed_sequence s{data};
     differentiator firstDerivative{s};
+    differentiator secondDerivative{firstDerivative}; // the danger of invoking the copy constructor
 
     return firstDerivative(0);
+//    return secondDerivative(0);
 }
