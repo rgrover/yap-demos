@@ -1,9 +1,10 @@
 
+/* I propose to create the following domain-specific language. */
 
 main()
 {
-    auto e =    take(4)
-            <<= map(apply(subtract1) *= apply(squared))
+    auto e =    take(4_c)
+            <<= map(apply(plus1) *= apply(times2) *= apply(squared))
             <<= filter(odd)
             <<= scalars<unsigned>{0, 1, 100};
 
