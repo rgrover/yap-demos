@@ -14,12 +14,9 @@ struct xforms
     }
 };
 
-
 #endif //_FILTER_XFORMS_HPP
 
-
-
-//    template <typename Predicate, typename RangeIterator>
-//    auto operator()(boost::yap::expr_tag<boost::yap::expr_kind::shift_left_assign>,
-//        filter_function<Predicate> f, range<RangeIterator> range) {
-//    }
+    //    template <typename Predicate, typename RangeIterator>
+    //    auto operator()(boost::yap::expr_tag<boost::yap::expr_kind::shift_left_assign>,
+    //        filter_function<Predicate> f, range<RangeIterator> range) {
+    //    }

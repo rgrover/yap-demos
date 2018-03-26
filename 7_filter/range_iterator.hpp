@@ -1,6 +1,8 @@
 #ifndef _RANGE_ITERATOR_HPP
 #define _RANGE_ITERATOR_HPP
 
+#include <iterator>
+
 template <typename UnderlyingIterator, typename IncrementFunction, typename DereferenceFunction>
 struct range_iterator
 {

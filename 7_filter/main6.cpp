@@ -1,7 +1,7 @@
 #include "scalars.hpp"
 #include "filter3.hpp"
+#include "xforms5.hpp"
 #include "boost/yap/print.hpp"
-#include "xforms4.hpp"
 
 using namespace boost::yap;
 
@@ -12,10 +12,8 @@ int main()
 {
     auto e = filter(multipleOf3) <<= filter(odd) <<= scalars<unsigned>{0,10};
 
-    auto t = transform(e, xforms{});
-    std::vector<int> v = t;
-
-//    for (auto value : v) {
-//        std::cout << value << std::endl;
-//    }
+    auto range = transform(e, xforms{});
+    for (auto value : range) {
+        std::cout << value << std::endl;
+    }
 }

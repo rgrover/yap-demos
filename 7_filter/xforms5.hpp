@@ -1,12 +1,12 @@
-#ifndef _FILTER_XFORMS_HPP
-#define _FILTER_XFORMS_HPP
-
-#include <boost/yap/algorithm_fwd.hpp>
+#ifndef _XFORMS_HPP
+#define _XFORMS_HPP
 
 #include "range.hpp"
 #include "range_iterator.hpp"
 #include "filter3.hpp"
 #include "expose.hpp"
+#include <type_traits>
+#include <boost/yap/algorithm.hpp>
 
 struct xforms
 {
@@ -75,4 +75,4 @@ struct xforms
     }
 };
 
-#endif //_FILTER_XFORMS_HPP
+#endif //_XFORMS_HPP
