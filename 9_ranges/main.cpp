@@ -7,8 +7,6 @@
 #include "fold.hpp"
 #include "xforms.hpp"
 #include "drop.hpp"
-
-#include <vector>
 #include <iostream>
 
 using namespace boost::yap;
@@ -22,8 +20,7 @@ bool even(unsigned x) { return (x % 2) == 0;}
 
 int main()
 {
-//    auto e =
-        foldl(multiply, 1)
+    auto e =     foldl(multiply, 1)
              <<= drop(1)
              <<= take(4)
              <<= filter([](unsigned x) { return (x % 5) == 0; })
@@ -34,8 +31,7 @@ int main()
 //    auto t = boost::yap::transform(e, xforms{});
 //    std::cout << t << std::endl;
 
-//    std::vector<int> v = boost::yap::transform(e, xforms{});
-//    for (auto value : v) {
+//    for (auto value : boost::yap::transform(e, xforms{})) {
 //        std::cout << value << std::endl;
 //    }
 }
