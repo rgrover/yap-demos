@@ -1,14 +1,15 @@
 #include "scalars.hpp"
-//#include <vector>
+#include <vector>
+#include <iostream>
 
 using namespace boost::yap;
 
 int main()
 {
-    auto e = scalars<unsigned>{0,100};
-
-//    static_assert(is_expr<decltype(e)>::value);
-//    std::vector<int> v = scalars<unsigned>{0,100};
+    std::vector<int> v = scalars<unsigned>{0, 100};
+    for (auto value : v) {
+        std::cout << value << std::endl;
+    }
 }
 
 // recall:

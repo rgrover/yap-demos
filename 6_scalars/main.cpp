@@ -15,7 +15,6 @@ struct scalars
 
 int main()
 {
-//    static_assert(is_expr<scalars<unsigned>>::value);
 }
 
 // recall:
